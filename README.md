@@ -1,1 +1,1 @@
-This repository is for all of my Python projects that I have created for practice and future reference.
+A repository for my practice Python projects.

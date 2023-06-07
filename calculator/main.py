@@ -22,6 +22,8 @@ operations = {
 }
 
 def calculator():
+    from art import logo
+    print(logo)
     num1 = float(input("Enter the first number: "))
     for key in operations:
         print(key)

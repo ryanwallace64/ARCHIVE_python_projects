@@ -38,14 +38,26 @@ def blackjack():
         else:
             deal_card(player_cards)
             if total_score(player_cards) > 21:
-                player_score = total_score(player_cards)
-                another_card = False
+                if 11 in player_cards:
+                    player_cards[player_cards.index(11)] = 1
+                else:
+                    player_score = total_score(player_cards)
+                    another_card = False
+
+    while dealer_score < 17:
+        deal_card(dealer_cards)
+        dealer_score = total_score(dealer_cards)
+        if dealer_score > 21:
+            if 11 in dealer_cards:
+                dealer_cards[dealer_cards.index(11)] = 1
 
     print(f"Your final hand: {player_cards}, final score: {player_score}")
     print(f"Dealer's final hand: {dealer_cards}, final score: {dealer_score}")
     
     if player_score > 21:
         print("You busted. You lose!")
+    elif dealer_score > 21:
+        print("Dealer busted. You win!")
     elif player_score == dealer_score:
         print("Draw!")
     elif player_score > dealer_score:

@@ -21,6 +21,9 @@ def deal_card(player):
                   
 def blackjack():
     '''Play Blackjack!'''
+    from art import logo
+    print(logo)
+    
     starting_cards()
     
     another_card = True

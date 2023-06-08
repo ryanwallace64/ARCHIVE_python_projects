@@ -1,5 +1,6 @@
 import random
 from replit import clear
+from art import logo
 
 def generate_number():
     return random.randint(1, 100)
@@ -19,6 +20,7 @@ def check_guess(guess):
 
 end_game = False
 while not end_game:
+    print(logo)
     clear()
     number = generate_number()
     print("Welcome to Number Guess!")

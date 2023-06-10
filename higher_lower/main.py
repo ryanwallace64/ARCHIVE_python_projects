@@ -4,9 +4,11 @@ import art
 from replit import clear
 
 def new_person():
+    '''Return a new person object from game_data.py'''
     return random.choice(game_data.data) 
 
 def game():
+    '''Run game until player loses'''
     print(art.logo)
     score = 0
     compare_b = new_person()
